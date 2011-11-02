@@ -1,14 +1,16 @@
+package proyecto1;
+
 /*
- * ProyectoUNOAboutBox.java
+ * Proyecto2AboutBox.java
  */
 
-package proyectouno;
+
 
 import org.jdesktop.application.Action;
 
-public class ProyectoUNOAboutBox extends javax.swing.JDialog {
+public class Proyecto2AboutBox extends javax.swing.JDialog {
 
-    public ProyectoUNOAboutBox(java.awt.Frame parent) {
+    public Proyecto2AboutBox(java.awt.Frame parent) {
         super(parent);
         initComponents();
         getRootPane().setDefaultButton(closeButton);
@@ -38,13 +40,13 @@ public class ProyectoUNOAboutBox extends javax.swing.JDialog {
         javax.swing.JLabel imageLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(proyectouno.ProyectoUNOApp.class).getContext().getResourceMap(ProyectoUNOAboutBox.class);
+        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(proyecto1.Proyecto2App.class).getContext().getResourceMap(Proyecto2AboutBox.class);
         setTitle(resourceMap.getString("title")); // NOI18N
         setModal(true);
         setName("aboutBox"); // NOI18N
         setResizable(false);
 
-        javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(proyectouno.ProyectoUNOApp.class).getContext().getActionMap(ProyectoUNOAboutBox.class, this);
+        javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(proyecto1.Proyecto2App.class).getContext().getActionMap(Proyecto2AboutBox.class, this);
         closeButton.setAction(actionMap.get("closeAboutBox")); // NOI18N
         closeButton.setName("closeButton"); // NOI18N
 

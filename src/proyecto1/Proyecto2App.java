@@ -1,8 +1,10 @@
+package proyecto1;
+
 /*
- * ProyectoUNOApp.java
+ * Proyecto2App.java
  */
 
-package proyectouno;
+
 
 import org.jdesktop.application.Application;
 import org.jdesktop.application.SingleFrameApplication;
@@ -10,13 +12,22 @@ import org.jdesktop.application.SingleFrameApplication;
 /**
  * The main class of the application.
  */
-public class ProyectoUNOApp extends SingleFrameApplication {
+public class Proyecto2App extends SingleFrameApplication {
 
     /**
      * At startup create and show the main frame of the application.
      */
     @Override protected void startup() {
-        show(new ProyectoUNOView(this));
+     
+        //Llamo la forma de Nombre del Jugador uno!
+       
+        NombreJugador1 c = new NombreJugador1();
+        c.setVisible(true);
+        c.pack();
+        
+       
+       
+        //Fin de la llamada de la forma :D
     }
 
     /**
@@ -29,16 +40,16 @@ public class ProyectoUNOApp extends SingleFrameApplication {
 
     /**
      * A convenient static getter for the application instance.
-     * @return the instance of ProyectoUNOApp
+     * @return the instance of Proyecto2App
      */
-    public static ProyectoUNOApp getApplication() {
-        return Application.getInstance(ProyectoUNOApp.class);
+    public static Proyecto2App getApplication() {
+        return Application.getInstance(Proyecto2App.class);
     }
 
     /**
      * Main method launching the application.
      */
     public static void main(String[] args) {
-        launch(ProyectoUNOApp.class, args);
+        launch(Proyecto2App.class, args);
     }
 }
