@@ -5,6 +5,7 @@
 package proyecto1;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 /**
  *
@@ -89,7 +90,7 @@ public class NewClass {
        
        System.out.println("Cantidad de Cartas Creadas: " + baraja.size() );
        
-    
+       Collections.shuffle(this.baraja);
      }   
       
              

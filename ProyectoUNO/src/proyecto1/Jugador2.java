@@ -27,7 +27,7 @@ public class Jugador2 extends javax.swing.JFrame {
     public Jugador2() {
         initComponents();
          NewClass n = new NewClass();
-        Collections.shuffle(n.baraja);
+        
         /*String Carta_1 = n.baraja.get(0);
         String Carta_2 = n.baraja.get(1);
         String Carta_3 = n.baraja.get(2);
@@ -51,9 +51,8 @@ public class Jugador2 extends javax.swing.JFrame {
         n.baraja.remove(0);
         this.Carta7.setText(n.baraja.get(6));
         n.baraja.remove(0);
-        Integer longi=n.baraja.size();
-        JOptionPane.showMessageDialog(rootPane,longi.toString());
         
+        this.setTitle(NombreJugador2.nombre2);
        
     }
 
@@ -156,6 +155,7 @@ public class Jugador2 extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
         
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
