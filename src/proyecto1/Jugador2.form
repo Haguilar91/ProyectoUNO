@@ -2,7 +2,8 @@
 
 <Form version="1.5" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
-    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="background" type="java.awt.Color" resourceKey="Form.background"/>
     <Property name="name" type="java.lang.String" value="Form" noResource="true"/>
   </Properties>
   <SyntheticProperties>
@@ -24,40 +25,38 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" pref="108" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" pref="108" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel3" min="-2" pref="108" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel5" min="-2" pref="108" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel4" min="-2" pref="108" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="311" max="-2" attributes="0"/>
-                      <Component id="txtNombre2" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace pref="108" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <Component id="Carta1" min="-2" pref="108" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="Carta2" min="-2" pref="108" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="Carta3" min="-2" pref="108" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="Carta5" min="-2" pref="108" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="Carta4" min="-2" pref="108" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+              <Component id="Carta7" min="-2" pref="108" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <Component id="Carta6" min="-2" pref="108" max="-2" attributes="0"/>
+              <EmptySpace pref="21" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-              <Component id="txtNombre2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel1" alignment="3" min="-2" pref="156" max="-2" attributes="0"/>
-                  <Component id="jLabel2" alignment="3" min="-2" pref="156" max="-2" attributes="0"/>
-                  <Component id="jLabel3" alignment="3" min="-2" pref="156" max="-2" attributes="0"/>
-                  <Component id="jLabel5" alignment="3" min="-2" pref="156" max="-2" attributes="0"/>
-                  <Component id="jLabel4" alignment="3" min="-2" pref="156" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="Carta4" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
+                  <Component id="Carta7" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
+                  <Component id="Carta6" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="Carta1" alignment="3" min="-2" pref="156" max="-2" attributes="0"/>
+                      <Component id="Carta2" alignment="3" min="-2" pref="156" max="-2" attributes="0"/>
+                      <Component id="Carta3" alignment="3" min="-2" pref="156" max="-2" attributes="0"/>
+                      <Component id="Carta5" alignment="3" min="-2" pref="156" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace pref="70" max="32767" attributes="0"/>
           </Group>
@@ -65,41 +64,40 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="Carta1">
       <Properties>
-        <Property name="text" type="java.lang.String" resourceKey="jLabel1.text"/>
-        <Property name="name" type="java.lang.String" value="jLabel1" noResource="true"/>
+        <Property name="background" type="java.awt.Color" resourceKey="Carta1.background"/>
+        <Property name="name" type="java.lang.String" value="Carta1" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="Carta2">
       <Properties>
-        <Property name="text" type="java.lang.String" resourceKey="jLabel2.text"/>
-        <Property name="name" type="java.lang.String" value="jLabel2" noResource="true"/>
+        <Property name="name" type="java.lang.String" value="Carta2" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="Carta3">
       <Properties>
-        <Property name="text" type="java.lang.String" resourceKey="jLabel3.text"/>
-        <Property name="name" type="java.lang.String" value="jLabel3" noResource="true"/>
+        <Property name="name" type="java.lang.String" value="Carta3" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
+    <Component class="javax.swing.JLabel" name="Carta4">
       <Properties>
-        <Property name="text" type="java.lang.String" resourceKey="jLabel4.text"/>
-        <Property name="name" type="java.lang.String" value="jLabel4" noResource="true"/>
+        <Property name="name" type="java.lang.String" value="Carta4" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel5">
+    <Component class="javax.swing.JLabel" name="Carta5">
       <Properties>
-        <Property name="text" type="java.lang.String" resourceKey="jLabel5.text"/>
-        <Property name="name" type="java.lang.String" value="jLabel5" noResource="true"/>
+        <Property name="name" type="java.lang.String" value="Carta5" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtNombre2">
+    <Component class="javax.swing.JLabel" name="Carta6">
       <Properties>
-        <Property name="editable" type="boolean" value="false"/>
-        <Property name="text" type="java.lang.String" resourceKey="txtNombre2.text"/>
-        <Property name="name" type="java.lang.String" value="txtNombre2" noResource="true"/>
+        <Property name="name" type="java.lang.String" value="Carta6" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Carta7">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="Carta7" noResource="true"/>
       </Properties>
     </Component>
   </SubComponents>

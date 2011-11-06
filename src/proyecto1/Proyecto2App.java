@@ -1,10 +1,8 @@
-package proyecto1;
-
 /*
  * Proyecto2App.java
  */
 
-
+package proyecto1;
 
 import org.jdesktop.application.Application;
 import org.jdesktop.application.SingleFrameApplication;

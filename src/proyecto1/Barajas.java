@@ -1,5 +1,8 @@
 package proyecto1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -20,7 +23,7 @@ public class Barajas extends javax.swing.JFrame {
 
     /** Creates new form Barajas */
     
-
+    
     
       
     
