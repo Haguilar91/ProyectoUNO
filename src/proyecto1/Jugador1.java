@@ -25,7 +25,8 @@ public class Jugador1 extends javax.swing.JFrame {
         initComponents();
         
         
-        this.setTitle("UNOJava Jugador : "+ new NombreJugador2().nombre2);
+        this.setTitle("UNOJava Jugador : "+ NombreJugador2.nombre2);
+        
     }
 
     /** This method is called from within the constructor to
