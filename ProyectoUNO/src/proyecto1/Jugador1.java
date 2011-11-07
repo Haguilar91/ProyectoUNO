@@ -24,34 +24,50 @@ import javax.swing.JOptionPane;
  * @author Hector
  */
 public class Jugador1 extends javax.swing.JFrame {
-
+  String Carta_1="";
+  String Carta_2="";
+  String Carta_3="";
+  String Carta_4="";
+  String Carta_5="";
+  String Carta_6="";
+  String Carta_7="";
     /** Creates new form Jugador1 */
     public Jugador1() {
+        
         initComponents();
-        NewClass n = new NewClass();
-        this.Carta1.setText(n.baraja.get(0));
+        Baraja n = new Baraja();
+        Carta_1 = (n.baraja.get(0));
         n.baraja.remove(0);
-        this.Carta2.setText(n.baraja.get(1));
+        Carta_2=(n.baraja.get(1));
         n.baraja.remove(0);
-        this.Carta3.setText(n.baraja.get(2));
+        Carta_3=(n.baraja.get(2));
         n.baraja.remove(0);
-        this.Carta4.setText(n.baraja.get(3));
+        Carta_4=(n.baraja.get(3));
         n.baraja.remove(0);
-        this.Carta5.setText(n.baraja.get(4));
+        Carta_5=(n.baraja.get(4));
         n.baraja.remove(0);
-        this.Carta6.setText(n.baraja.get(5));
+        Carta_6=(n.baraja.get(5));
         n.baraja.remove(0);
-        this.Carta7.setText(n.baraja.get(6));
+        Carta_7=(n.baraja.get(6));
         n.baraja.remove(0);
+        
         Integer longi=n.baraja.size();
         this.setTitle(NombreJugador1.nombre1);
         JOptionPane.showMessageDialog(rootPane,longi.toString());
         
-
-        
-    }
-   
+       
     
+  
+            
+            
+         
+            
+            
+        }
+        
+    
+   
+
      
 
     /** This method is called from within the constructor to

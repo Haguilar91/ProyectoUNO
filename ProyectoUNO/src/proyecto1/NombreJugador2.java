@@ -105,7 +105,7 @@ private void BtnAcepJug2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST
     nombre2 = this.txtNombreJug2.getText();
     JOptionPane.showMessageDialog(rootPane, "Bienvenido "+ nombre2);
     this.setVisible(false);
-      Barajas o = new Barajas();
+      Pantalla_Principal o = new Pantalla_Principal();
         o.setVisible(true);
         o.pack();
 }//GEN-LAST:event_BtnAcepJug2MouseClicked
