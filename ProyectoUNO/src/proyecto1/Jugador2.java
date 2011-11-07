@@ -1,5 +1,8 @@
 package proyecto1;
 
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -22,36 +25,73 @@ package proyecto1;
 public class Jugador2 extends javax.swing.JFrame {
 
     /** Creates new form Jugador1 */
+    boolean activo;
     public Jugador2() {
         initComponents();
-         Baraja n = new Baraja();
+     
+        ImageIcon i1,i2,i3,i4,i5,i6,i7;
+        String Carta_1 = "";
+        String Carta_2 = "";
+        String Carta_3 ="";
+        String Carta_4= "";
+        String Carta_5 ="";
+        String Carta_6 = "";
+        String Carta_7 = "";
+      
         
-        /*String Carta_1 = n.baraja.get(0);
-        String Carta_2 = n.baraja.get(1);
-        String Carta_3 = n.baraja.get(2);
-        String Carta_4= n.baraja.get(3);
-        String Carta_5 = n.baraja.get(4);
-        String Carta_6 = n.baraja.get(5);
-        String Carta_7 = n.baraja.get(6);
-        */
-        
-        this.Carta1.setText(n.baraja.get(0));
+        Baraja n  = new Baraja();
+    
+        Carta_1 = (n.baraja.get(0));
         n.baraja.remove(0);
-        this.Carta2.setText(n.baraja.get(1));
-        n.baraja.remove(0);
-        this.Carta3.setText(n.baraja.get(2));
-        n.baraja.remove(0);
-        this.Carta4.setText(n.baraja.get(3));
-        n.baraja.remove(0);
-        this.Carta5.setText(n.baraja.get(4));
-        n.baraja.remove(0);
-        this.Carta6.setText(n.baraja.get(5));
-        n.baraja.remove(0);
-        this.Carta7.setText(n.baraja.get(6));
-        n.baraja.remove(0);
-        
-        this.setTitle(NombreJugador2.nombre2);
+        i1 = new ImageIcon(getClass().getResource(Carta_1));
+        this.Carta1.setText("");
+        this.Carta1.setIcon(i1);
        
+       
+        Carta_2 = (n.baraja.get(1));
+        n.baraja.remove(0);
+        i2 = new ImageIcon(getClass().getResource(Carta_2));
+        this.Carta2.setText("");
+        this.Carta2.setIcon(i2);
+        
+        Carta_3 = (n.baraja.get(2));
+        n.baraja.remove(0);
+        i3 = new ImageIcon(getClass().getResource(Carta_3));
+        this.Carta3.setText("");
+        this.Carta3.setIcon(i3);
+        
+        Carta_4 = (n.baraja.get(3));
+        n.baraja.remove(0);
+        i4 = new ImageIcon(getClass().getResource(Carta_4));
+        this.Carta4.setText("");
+        this.Carta4.setIcon(i4);
+        
+        Carta_5 = (n.baraja.get(4));
+        n.baraja.remove(0);
+        i5 = new ImageIcon(getClass().getResource(Carta_5));
+        this.Carta5.setText("");
+        this.Carta5.setIcon(i5);
+        
+        Carta_6 = (n.baraja.get(5));
+        n.baraja.remove(0);
+        i6 = new ImageIcon(getClass().getResource(Carta_6));
+        this.Carta6.setText("");
+        this.Carta6.setIcon(i6);
+        
+        Carta_7 = (n.baraja.get(6));
+        n.baraja.remove(0);
+        i7 = new ImageIcon(getClass().getResource(Carta_7));
+        this.Carta7.setText("");
+        this.Carta7.setIcon(i7);
+        
+        Integer longi=n.baraja.size();
+        this.setTitle(NombreJugador1.nombre1);
+        JOptionPane.showMessageDialog(rootPane,longi.toString());
+        
+       
+        this.setTitle("UNOJava Jugador 2: "+NombreJugador2.nombre2);
+        activo=false;
+        this.btnTurno.setEnabled(activo);
     }
 
     /** This method is called from within the constructor to
@@ -70,6 +110,7 @@ public class Jugador2 extends javax.swing.JFrame {
         Carta5 = new javax.swing.JLabel();
         Carta6 = new javax.swing.JLabel();
         Carta7 = new javax.swing.JLabel();
+        btnTurno = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setName("Form"); // NOI18N
@@ -88,31 +129,45 @@ public class Jugador2 extends javax.swing.JFrame {
 
         Carta7.setName("Carta7"); // NOI18N
 
+        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance().getContext().getResourceMap(Jugador2.class);
+        btnTurno.setText(resourceMap.getString("btnTurno.text")); // NOI18N
+        btnTurno.setName("btnTurno"); // NOI18N
+        btnTurno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnTurnoMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(Carta1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Carta2, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Carta3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Carta5, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Carta4, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14)
-                .addComponent(Carta7, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(Carta6, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnTurno)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(Carta1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Carta2, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Carta3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Carta5, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Carta4, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(14, 14, 14)
+                        .addComponent(Carta7, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Carta6, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(117, 117, 117)
+                .addContainerGap()
+                .addComponent(btnTurno)
+                .addGap(83, 83, 83)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Carta4, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Carta7, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -127,6 +182,12 @@ public class Jugador2 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTurnoMouseClicked
+        // TODO add your handling code here:
+  
+        
+    }//GEN-LAST:event_btnTurnoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -173,5 +234,6 @@ public class Jugador2 extends javax.swing.JFrame {
     private javax.swing.JLabel Carta5;
     private javax.swing.JLabel Carta6;
     private javax.swing.JLabel Carta7;
+    private javax.swing.JButton btnTurno;
     // End of variables declaration//GEN-END:variables
 }

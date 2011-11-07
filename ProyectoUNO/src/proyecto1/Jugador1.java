@@ -12,11 +12,7 @@ package proyecto1;
  */
 
 
-import java.awt.Image;
-import java.util.ArrayList;
-import java.util.List;
 import javax.swing.ImageIcon;
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -24,6 +20,7 @@ import javax.swing.JOptionPane;
  * @author Hector
  */
 public class Jugador1 extends javax.swing.JFrame {
+  ImageIcon i1,i2,i3,i4,i5,i6,i7;
   String Carta_1="";
   String Carta_2="";
   String Carta_3="";
@@ -35,28 +32,62 @@ public class Jugador1 extends javax.swing.JFrame {
     public Jugador1() {
         
         initComponents();
-        Baraja n = new Baraja();
+        Baraja n  = new Baraja();
         Carta_1 = (n.baraja.get(0));
         n.baraja.remove(0);
-        Carta_2=(n.baraja.get(1));
+        i1 = new ImageIcon(getClass().getResource(Carta_1));
+        this.Carta1.setText("");
+        this.Carta1.setIcon(i1);
+       
+       
+        Carta_2 = (n.baraja.get(1));
         n.baraja.remove(0);
-        Carta_3=(n.baraja.get(2));
+        i2 = new ImageIcon(getClass().getResource(Carta_2));
+        this.Carta2.setText("");
+        this.Carta2.setIcon(i2);
+        
+        Carta_3 = (n.baraja.get(2));
         n.baraja.remove(0);
-        Carta_4=(n.baraja.get(3));
+        i3 = new ImageIcon(getClass().getResource(Carta_3));
+        this.Carta3.setText("");
+        this.Carta3.setIcon(i3);
+        
+        Carta_4 = (n.baraja.get(3));
         n.baraja.remove(0);
-        Carta_5=(n.baraja.get(4));
+        i4 = new ImageIcon(getClass().getResource(Carta_4));
+        this.Carta4.setText("");
+        this.Carta4.setIcon(i4);
+        
+        Carta_5 = (n.baraja.get(4));
         n.baraja.remove(0);
-        Carta_6=(n.baraja.get(5));
+        i5 = new ImageIcon(getClass().getResource(Carta_5));
+        this.Carta5.setText("");
+        this.Carta5.setIcon(i5);
+        
+        Carta_6 = (n.baraja.get(5));
         n.baraja.remove(0);
-        Carta_7=(n.baraja.get(6));
+        i6 = new ImageIcon(getClass().getResource(Carta_6));
+        this.Carta6.setText("");
+        this.Carta6.setIcon(i6);
+        
+        Carta_7 = (n.baraja.get(6));
         n.baraja.remove(0);
+        i7 = new ImageIcon(getClass().getResource(Carta_7));
+        this.Carta7.setText("");
+        this.Carta7.setIcon(i7);
+        
+       
+      
+        
+        
+        
         
         Integer longi=n.baraja.size();
-        this.setTitle(NombreJugador1.nombre1);
+        this.setTitle("UNOJava Jugador 1: "+NombreJugador1.nombre1);
         JOptionPane.showMessageDialog(rootPane,longi.toString());
         
        
-    
+     
   
             
             
@@ -87,6 +118,7 @@ public class Jugador1 extends javax.swing.JFrame {
         Carta6 = new javax.swing.JLabel();
         Carta7 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        btnTurno = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance().getContext().getResourceMap(Jugador1.class);
@@ -121,12 +153,20 @@ public class Jugador1 extends javax.swing.JFrame {
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
+        btnTurno.setText(resourceMap.getString("btnTurno.text")); // NOI18N
+        btnTurno.setName("btnTurno"); // NOI18N
+        btnTurno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnTurnoMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(Carta1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -144,13 +184,19 @@ public class Jugador1 extends javax.swing.JFrame {
                         .addComponent(Carta6, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(179, 179, 179)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnTurno)))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnTurno)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Carta4, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -167,6 +213,13 @@ public class Jugador1 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTurnoMouseClicked
+        // TODO add your handling code here:
+    
+        
+        
+    }//GEN-LAST:event_btnTurnoMouseClicked
+    
     /**
      * @param args the command line arguments
      */
@@ -214,6 +267,7 @@ public class Jugador1 extends javax.swing.JFrame {
     private javax.swing.JLabel Carta5;
     private javax.swing.JLabel Carta6;
     private javax.swing.JLabel Carta7;
+    private javax.swing.JButton btnTurno;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

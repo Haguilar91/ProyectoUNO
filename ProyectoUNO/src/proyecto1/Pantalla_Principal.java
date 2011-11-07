@@ -1,7 +1,6 @@
 package proyecto1;
 
-import java.util.ArrayList;
-import java.util.List;
+import javax.swing.ImageIcon;
 
 /*
  * To change this template, choose Tools | Templates
@@ -24,40 +23,60 @@ public class Pantalla_Principal extends javax.swing.JFrame {
     /** Creates new form Pantalla_Principal */
     
     
-    
-      
-    Integer longi;
+        ImageIcon imagen;
+        Baraja n = new Baraja();
+        Integer longi;
+        
     public Pantalla_Principal() {
         
+        initComponents();
+        
+        imagen= new ImageIcon(getClass().getResource(n.baraja.get(0)));
+        this.lblCarta.setText("");
+        this.lblCarta.setIcon(imagen);
+     
         String juga1 = NombreJugador1.nombre1;
         String juga2 = NombreJugador2.nombre2;
-        Baraja n = new Baraja();
         this.setTitle("UNOJava Baraja! "+juga1 +" Vrs. "+juga2);
-        initComponents();
+      
+        
+        
         //Iniciando las 2 formas de Jugadores
         Jugador1 j = new Jugador1();
         j.setVisible(true);
         j.pack();
         
+        
         Jugador2 k = new Jugador2();
         k.setVisible(true);
         k.pack();
+       
+      
+        
+       
+        
+       
         
        longi=n.baraja.size(); 
+       
        this.txtRestantes.setText(longi.toString());
        
-       this.lblCarta3.setText(n.baraja.get(0));
+     
+    
+       
        
     }
        
-       public void getLongitud(){
+      
         
-       Pantalla_Principal h = new Pantalla_Principal();
+       public void getLongitud(){ 
+       Baraja h = new Baraja();
        Integer longitu;
-       Baraja n = new Baraja();
-       longitu = n.baraja.size();
+       
+       longitu = h.baraja.size();
        this.txtRestantes.setText(longitu.toString());
       }
+       
     
     
 
@@ -71,9 +90,7 @@ public class Pantalla_Principal extends javax.swing.JFrame {
     private void initComponents() {
 
         txtRestantes = new javax.swing.JTextField();
-        lblCarta3 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        lblCarta = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -90,14 +107,8 @@ public class Pantalla_Principal extends javax.swing.JFrame {
         txtRestantes.setEnabled(false);
         txtRestantes.setName("txtRestantes"); // NOI18N
 
-        lblCarta3.setText(resourceMap.getString("lblCarta3.text")); // NOI18N
-        lblCarta3.setName("lblCarta3"); // NOI18N
-
-        jLabel9.setText(resourceMap.getString("jLabel9.text")); // NOI18N
-        jLabel9.setName("jLabel9"); // NOI18N
-
-        jLabel1.setText(resourceMap.getString("jLabel1.text")); // NOI18N
-        jLabel1.setName("jLabel1"); // NOI18N
+        lblCarta.setText(resourceMap.getString("lblCarta.text")); // NOI18N
+        lblCarta.setName("lblCarta"); // NOI18N
 
         jMenuBar1.setName("jMenuBar1"); // NOI18N
 
@@ -134,29 +145,22 @@ public class Pantalla_Principal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(119, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblCarta3, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel9))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtRestantes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(198, 198, 198))
+                .addContainerGap(238, Short.MAX_VALUE)
+                .addComponent(txtRestantes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(224, 224, 224))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(179, 179, 179)
+                .addComponent(lblCarta, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(180, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtRestantes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9))
-                .addGap(27, 27, 27)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblCarta3, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addComponent(txtRestantes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(lblCarta, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         pack();
@@ -166,6 +170,7 @@ public class Pantalla_Principal extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -194,6 +199,7 @@ public class Pantalla_Principal extends javax.swing.JFrame {
 
             public void run() {
                 new Pantalla_Principal().setVisible(true);
+               
                 //Llamando la forma de Jugador1 al mismo tiempo
                 
                //Termina llamado de la forma de Jugador1
@@ -204,12 +210,12 @@ public class Pantalla_Principal extends javax.swing.JFrame {
     
     //}
     }
+    
+  
         
         
         
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
@@ -217,7 +223,7 @@ public class Pantalla_Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JLabel lblCarta3;
+    private javax.swing.JLabel lblCarta;
     private javax.swing.JTextField txtRestantes;
     // End of variables declaration//GEN-END:variables
 }

@@ -14,69 +14,69 @@ import java.util.List;
 public class Baraja {
  
        
-        List <String> baraja = new ArrayList <String>();
+  List <String> baraja = new ArrayList <String>();
         
         
      public Baraja(){   
     //Generando Baraja Roja! 
     for (int i=0; i<10;i++){  
-        baraja.add(i+"R");
+        baraja.add(i+"R.png");
     }
      for (int i=1; i<10;i++){  
-        baraja.add(i+"R");
+        baraja.add(i+"R.png");
     }
       for (int i =0; i<2;i++){
-        baraja.add("RI");
-        baraja.add("RB");
-        baraja.add("RT2");
+        baraja.add("IR.png");
+        baraja.add("BR.png");
+        baraja.add("T2R.png");
       }
       
       //Generando Baraja Verde
      for (int i=0; i<10;i++){
-        baraja.add(i+"V");
+        baraja.add(i+"V.png");
      }
      for (int i=1; i<10;i++){
-        baraja.add(i+"V");
+        baraja.add(i+"V.png");
      }
      
      for (int i =0; i<2;i++){
-        baraja.add("VI");
-        baraja.add("VB");
-        baraja.add("T2V");
+        baraja.add("IV.png");
+        baraja.add("BV.png");
+        baraja.add("T2V.png");
      }
      
      
      
      //Generando Baraja Amarilla
       for (int i=0; i<10;i++){
-        baraja.add(i+"AM");
+        baraja.add(i+"AM.png");
       }
       for (int i=1; i<10;i++){
-      baraja.add(i+"AM");
+      baraja.add(i+"AM.png");
       }
       
       for (int i =0; i<2;i++){
-        baraja.add("IA");
-        baraja.add("BAM");
-        baraja.add("T2AM");
+        baraja.add("IA.png");
+        baraja.add("BAM.png");
+        baraja.add("T2AM.png");
       }
       
       //Generando Baraja Azul
       for (int i=0; i<10;i++){
-      baraja.add(i+"A");
+      baraja.add(i+"A.png");
       }
       for (int i=1; i<10;i++){
-      baraja.add(i+"A");
+      baraja.add(i+"A.png");
       }
        for (int i =0; i<2;i++){
-        baraja.add("IA");
-        baraja.add("BA");
-        baraja.add("T2A");
+        baraja.add("IA.png");
+        baraja.add("BA.png");
+        baraja.add("T2A.png");
        }
        
        for (int i=0;i<4;i++){
-        baraja.add("T4");
-        baraja.add("CambColor");
+        baraja.add("CT4.png");
+        baraja.add("CC.png");
        }
         
         
@@ -86,6 +86,8 @@ public class Baraja {
     
        }
       */
+       
+      
        
        
        System.out.println("Cantidad de Cartas Creadas: " + baraja.size() );
@@ -97,9 +99,9 @@ public class Baraja {
         
     
     public static void main (String args[]){
-   
+      
    }
-
+  
     }
 
 
